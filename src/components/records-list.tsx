@@ -7,7 +7,6 @@ const RecordsList = ({
   selected: string;
   setSelected: (selected: string) => void;
 }) => {
-
   const records = useAppSelector((state) => state.recordReducer.data);
 
   return (
