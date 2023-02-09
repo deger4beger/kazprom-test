@@ -1,5 +1,5 @@
 # kazprom-test
-[Test task for kazprom-engineering](https://next-auth.js.org)
+[Test task for kazprom-engineering](https://deger4beger.github.io/kazprom-test/)
 
 ### Running Locally
 
