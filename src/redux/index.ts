@@ -2,9 +2,10 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux/es/exports";
 import { TypedUseSelectorHook } from "react-redux/es/types";
+import recordReducer from "./record";
 
 const rootReducer = combineReducers({
-  // userReducer,
+  recordReducer,
 });
 
 export const setupStore = () => {

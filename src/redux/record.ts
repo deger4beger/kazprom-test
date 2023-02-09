@@ -16,7 +16,7 @@ const getUid = function(){
     return Date.now().toString(36) + Math.random().toString(36);
 }
 
-export const recordReducer = createSlice({
+export const recordSlice = createSlice({
 	name: "record",
 	initialState,
 	reducers: {
@@ -32,6 +32,6 @@ export const recordReducer = createSlice({
 	}
 })
 
-export const { createRecord, deleteRecord } = recordReducer.actions;
+export const { createRecord, deleteRecord } = recordSlice.actions;
 
-export default recordReducer.reducer;
+export default recordSlice.reducer;
