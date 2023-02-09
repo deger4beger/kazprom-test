@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import { useAppDispatch, useAppSelector } from "./redux";
+import RecordsList from "./components/records-list";
+import { useAppDispatch } from "./redux";
 import { createRecord, deleteRecord } from "./redux/record";
 
 function App() {
   const [selected, setSelected] = useState("");
-  const records = useAppSelector((state) => state.recordReducer.data);
   const dispatch = useAppDispatch();
 
   const onCreateRecord = () => {
@@ -45,17 +45,7 @@ function App() {
         </button>
         <button className="button">Тест GraphQL</button>
       </div>
-      <div className="records">
-        {records.map((record) => (
-          <div
-            key={record.id}
-            className={"record" + (record.id === selected ? " selected" : "")}
-            onClick={() => onSetSelected(record.id)}
-          >
-            {record.text}
-          </div>
-        ))}
-      </div>
+      <RecordsList selected={selected} setSelected={onSetSelected} />
     </div>
   );
 }
