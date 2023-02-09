@@ -13,4 +13,4 @@ yarn
 yarn dev
 ```
 
-Then move to [localhost:4000](localhost:4000)
+Then move to [localhost:4000](http://localhost:4000)
