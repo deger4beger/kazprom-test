@@ -22,13 +22,17 @@ function App() {
     selected === id ? setSelected("") : setSelected(id);
 
   const onDeleteRecord = () => {
-    if (!selected) return
-    const record = window.confirm("Вы действительно хотите удалить выбранную запись ?")
-    if (!record) return
-    dispatch(deleteRecord({
-      id: selected
-    }))
-  }
+    if (!selected) return;
+    const record = window.confirm(
+      "Вы действительно хотите удалить выбранную запись ?"
+    );
+    if (!record) return;
+    dispatch(
+      deleteRecord({
+        id: selected,
+      })
+    );
+  };
 
   return (
     <div className="wrapper">
@@ -36,7 +40,9 @@ function App() {
         <button className="button" onClick={onCreateRecord}>
           Добавить
         </button>
-        <button className="button" onClick={onDeleteRecord}>Удалить</button>
+        <button className="button" onClick={onDeleteRecord}>
+          Удалить
+        </button>
         <button className="button">Тест GraphQL</button>
       </div>
       <div className="records">

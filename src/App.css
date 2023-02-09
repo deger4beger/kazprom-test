@@ -20,10 +20,10 @@
 }
 
 .button:nth-child(1) {
-  background-color: #3B7860
+  background-color: #3b7860;
 }
 .button:nth-child(2) {
-  background-color: #8A4646;
+  background-color: #8a4646;
 }
 
 .records {
@@ -33,9 +33,9 @@
 .record {
   padding: 6px 16px;
   cursor: pointer;
-  border: 2px solid #3A3535;
+  border: 2px solid #3a3535;
 }
 
 .record.selected {
-  border-color:  green;
+  border-color: green;
 }
