@@ -1,10 +1,21 @@
 import "./App.css"
 import { useAppDispatch, useAppSelector } from "./redux"
+import { createRecord } from "./redux/record";
 
 function App() {
 
   const dispatch = useAppDispatch();
   const records = useAppSelector(state => state.recordReducer.data);
+
+  const onCreateRecord = () => {
+    const record = window.prompt("Введите текст записи");
+    if (!record) return
+    dispatch(createRecord({
+      text: record
+    }))
+  }
+
+  // const onDeleteRecord
 
   return (
     <div className="wrapper">
@@ -22,7 +33,7 @@ function App() {
       <div className="records">
         {
           records.map(record =>
-            <div>
+            <div className="record">
               { record.text }
             </div>
           )
