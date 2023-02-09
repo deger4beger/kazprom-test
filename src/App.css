@@ -33,9 +33,9 @@
 .record {
   padding: 6px 16px;
   cursor: pointer;
-  border: 2px solid #736868;
+  border: 2px solid #3A3535;
 }
 
 .record.selected {
-  border: green;
+  border-color:  green;
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { useAppDispatch, useAppSelector } from "./redux";
-import { createRecord } from "./redux/record";
+import { createRecord, deleteRecord } from "./redux/record";
 
 function App() {
   const [selected, setSelected] = useState("");
@@ -21,7 +21,14 @@ function App() {
   const onSetSelected = (id: string) =>
     selected === id ? setSelected("") : setSelected(id);
 
-  // const onDeleteRecord
+  const onDeleteRecord = () => {
+    if (!selected) return
+    const record = window.confirm("Вы действительно хотите удалить выбранную запись ?")
+    if (!record) return
+    dispatch(deleteRecord({
+      id: selected
+    }))
+  }
 
   return (
     <div className="wrapper">
@@ -29,7 +36,7 @@ function App() {
         <button className="button" onClick={onCreateRecord}>
           Добавить
         </button>
-        <button className="button">Удалить</button>
+        <button className="button" onClick={onDeleteRecord}>Удалить</button>
         <button className="button">Тест GraphQL</button>
       </div>
       <div className="records">
