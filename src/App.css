@@ -1,0 +1,25 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin-top: 60px;
+}
+
+.button {
+  margin: 6px;
+  padding: 6px;
+  border: 0px;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.button:nth-child(1) {
+  background-color: #74B199
+}
+.button:nth-child(2) {
+  background-color: #C06C6C;
+}
